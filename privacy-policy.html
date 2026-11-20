@@ -56,7 +56,7 @@
     <div class="brand">Travel Buddy</div>
     <h1>Privacy Policy</h1>
     <p class="summary">What Travel Buddy stores about you, who else ever sees it, and what you can do about it.</p>
-    <p class="updated">Last updated: 17 October 2026</p>
+    <p class="updated">Last updated: 19 November 2026</p>
   </header>
 
   <nav>
@@ -76,11 +76,11 @@
 
     <section id="s1">
       <h2><span class="num">1</span>What we collect</h2>
-      <p>Your account. The email address you sign up with, and the name you give us. If you use Sign in with Google instead, Google tells us your name and email address so that the account can be created.</p>
+      <p>Your account. The email address you sign up with, and the name you give us. If you use Sign in with Google instead, Google tells us your name and email address so that the account can be created. We also record that you accepted the Terms and this policy: which version, and when.</p>
       <p>What you put in the app. Trips, destinations and dates; itinerary entries, stays and transport; expenses, budgets and who owes what; packing lists; journal entries and any photos you attach to them; travel documents you upload or import; and the profile details you fill in, such as your home country, emergency contact and loyalty numbers.</p>
       <p>Notification tokens. If you turn on trip notifications, we store a push token for that device so a reminder can reach it. Turning notifications off stops it being used.</p>
       <p>Your location, only when you ask for it. The trip map in Explore can show where you are. Travel Buddy asks for location permission the first time you tap to show your position on that map, and never before; you can allow it — on recent Android versions, as precise or approximate location — or say no, and the map works either way. Your position is used only while that map is open on your screen, and only to draw it there. The app never stores your position, on your device or on our servers, and never sends it to us, includes it in usage statistics, or puts it in a crash report. There is no background tracking of any kind: when the map is closed, the app does not look at where you are. Nothing else in the app uses your position — your trip's days and places always come from what you planned, not from where you happen to be.</p>
-      <p>Usage statistics. Unless you turn them off, the app records a small, fixed set of product events — for example that the app was opened, that a booking import succeeded or failed, or that a day of a trip in progress was viewed — so that we can tell whether a feature actually helps. Each event carries only details chosen in advance — labels from a closed list (such as which screen it happened on), yes-or-no flags (such as whether the phone was offline) and a few counts (such as which day of the trip it is, or how many fields of an import were edited) — together with the time it happened, a random identifier created for this installation of the app, the app version and the platform. It never carries your name, email address or account identifier, the names of your trips or places, anything you typed, your location, or the contents of a booking, journal entry, document or photo.</p>
+      <p>Usage statistics. Only if you agree — the app asks once, after you sign in, and records nothing until you say yes — the app records a small, fixed set of product events — for example that the app was opened, that a booking import succeeded or failed, or that a day of a trip in progress was viewed — so that we can tell whether a feature actually helps. Each event carries only details chosen in advance — labels from a closed list (such as which screen it happened on), yes-or-no flags (such as whether the phone was offline) and a few counts (such as which day of the trip it is, or how many fields of an import were edited) — together with the time it happened, a random identifier created for this installation of the app, the app version and the platform. It never carries your name, email address or account identifier, the names of your trips or places, anything you typed, your location, or the contents of a booking, journal entry, document or photo.</p>
     </section>
 
     <section id="s2">
@@ -98,10 +98,10 @@
       <p>Supabase hosts the service — the database your trips live in, the private file storage that holds your documents and journal photos, and the sign-in system that holds your email address and password.</p>
       <p>Expo, which runs the push service the app is built on, receives each device's push token and the text of each notification, and passes them to Google for delivery. To set up notifications on a device, the app sends Expo the token Google's Firebase service issued for that device, a random identifier Expo creates for this installation of the app, and the app's own identifiers. With each notification, our server also sends Expo the identifiers the app needs to open the right screen when you tap it. A notification's text can include details from your trip, such as a flight or a check-in time.</p>
       <p>Google delivers push notifications to Android devices through Firebase Cloud Messaging, and handles Sign in with Google if you choose it.</p>
-      <p>Anthropic reads your booking imports. When you import a confirmation, the file or text you chose is sent through our server to Anthropic's Claude API, which pulls the flight, stay or booking details out of it. The app sends it only to get that answer.</p>
+      <p>Anthropic reads your booking imports. When you import a confirmation, the file or text you chose is sent through our server to Anthropic's Claude API, which pulls the flight, stay or booking details out of it. If you import a travel document into your wallet — a passport, an ID card or a visa — the image or file of that document is sent the same way, so that the details printed on it, such as your name, its number and its dates, can be read. The app sends it only to get that answer. We keep what was read from an import with the import itself, until you delete it or your account. Anthropic processes what it is sent under its commercial terms for its API; how long Anthropic keeps it is set by Anthropic's own data-retention policy, not by us.</p>
       <p>Mapbox powers the search for destinations and cities. What you type into a destination, city, journal-location, wishlist or transport city field — or into a pickup or meeting-point field on an imported booking — is sent to Mapbox to return suggestions, and the name and country of a destination are sent to Mapbox when the app needs to find that destination on a map.</p>
       <p>Geoapify draws the trip map in Explore and helps find the places your plans name. It supplies the map images for the area you are looking at, so it receives requests for that area — if you centre the map on yourself, that area is around you, though your exact position is never sent. When you search for the place of a plan or the address of a stay — including while reviewing an import — what you type is sent to Geoapify as you type, together with the public map position of the trip's city when the app knows it, to suggest places. When a plan has a location you typed but no saved position, that text and the city it belongs to (with the city's public map position) are sent to Geoapify to find it, so the app can offer directions there. To estimate how long it takes to walk between two of your planned places, the app sends Geoapify the map positions of those two places and nothing else about them — and only for places found through Geoapify or published map data, never a place picked through the Mapbox search and never your own position. The walking times that come back are kept on your device with your account's other offline data. No account details are sent with any of these requests, though like any web service Geoapify sees the network address a request comes from.</p>
-      <p>PostHog receives the usage statistics described in section 1, on servers in the European Union. They are sent under the random identifier for this installation of the app, never under your account, and they stop entirely if you turn usage statistics off.</p>
+      <p>PostHog receives the usage statistics described in section 1, on servers in the European Union. They are sent under the random identifier for this installation of the app, never under your account. They are sent only if you agreed to usage statistics, and stop entirely if you turn them off.</p>
       <p>WeatherAPI.com returns forecasts. We send it the destination of the trip you are looking at — nothing about you.</p>
       <p>Frankfurter supplies exchange rates. It receives currency codes only, and nothing about you or your trip.</p>
       <p>AeroDataBox, through RapidAPI, supplies live flight status. Our server checks the flights in your trips on a schedule: for a flight that has an airline code and flight number, it looks up that flight a few times in the day before it departs, and more often in the last three hours before departure until shortly after it leaves. Each time, it sends AeroDataBox that flight number and the local date of departure, and nothing that identifies you, your account or the trip the flight belongs to. This happens whether or not you have notifications switched on.</p>
@@ -138,18 +138,18 @@
 
     <section id="s8">
       <h2><span class="num">8</span>Changes to this policy</h2>
-      <p>If this policy changes, we update this page and the date shown at the top of it. The version in force is dated 17 October 2026.</p>
+      <p>If this policy changes, we update this page and the date shown at the top of it. The version in force is dated 19 November 2026.</p>
     </section>
 
     <section id="s9">
       <h2><span class="num">9</span>Contact</h2>
       <p>If you have a question or a concern about this Privacy Policy, or about how your data is handled, write to us at:</p>
-      <p>support@ultimatetravelbuddy.app</p>
+      <p>little.giant.apps@gmail.com</p>
       <p>We respond to privacy enquiries within 5 business days.</p>
     </section>
 
   <footer>
-    <p>Also available: <a href="./terms.html">Terms of Service</a>. Both documents are shown inside the Travel Buddy app as well, and are accepted together when an account is created.</p>
+    <p>Also available: <a href="./terms.html">Terms of Service</a> · <a href="./delete-account.html">Delete your Travel Buddy account</a>. The Privacy Policy and the Terms are shown inside the Travel Buddy app as well, and are accepted together when an account is created.</p>
   </footer>
 </main>
 </body>
